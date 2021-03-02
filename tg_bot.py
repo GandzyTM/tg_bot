@@ -18,6 +18,7 @@ def send_text(message):
         bot.send_message(message.chat.id, 'Прощай, создатель')
     elif message.text.lower() == 'телефон охраны':
         bot.send_message(message.chat.id, '+79538241398')
+        bot.send_contact(message.chat.id, '+79538241398')
 
 
 bot.polling()
