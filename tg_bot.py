@@ -12,13 +12,15 @@ def start_message(message):
 
 @bot.message_handler(content_types=['text'])
 def send_text(message):
-    if message.text.lower() == 'привет':
-        bot.send_message(message.chat.id, 'Привет, мой создатель')
-    elif message.text.lower() == 'пока':
-        bot.send_message(message.chat.id, 'Прощай, создатель')
-    elif message.text.lower() == 'телефон охраны':
+    if message.text.lower() == 'телефон охраны':
         bot.send_message(message.chat.id, '+79538241398')
-        bot.send_contact(message.chat.id, '+79538241398')
+    elif message.text.lower() == 'вызов детского врача':
+        bot.send_message(message.chat.id, '+7(343)227-01-72')
+    elif message.text.lower() == 'вызов врача':
+        bot.send_message(message.chat.id, '')
+    elif message.text.lower() == 'взрослая поликлиника':
+        bot.send_message(message.chat.id, 'https://yandex.ru/maps/54/yekaterinburg/house/ulitsa_musorgskogo_2/YkkYcAZgQUwCQFtsfXt3cXthYw==/inside/?ll=60.611272%2C56.760478&z=17.71')
+
 
 
 bot.polling()
